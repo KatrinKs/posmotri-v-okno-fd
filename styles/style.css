@@ -164,7 +164,7 @@ ol {
 
 .content__card-link:hover .content__video-card-title,
 .content__card-link:hover .content__video-card-description {
-    text-decoration: underline; 
+  text-decoration: underline; 
 }
 
 .content__list-item:focus {
