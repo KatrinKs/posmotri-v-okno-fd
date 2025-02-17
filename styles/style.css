@@ -84,26 +84,25 @@ ol {
 
 .content__details {
   display: grid;
-  /* grid-template-rows: auto auto; */
   grid-area: content__details;
   gap: 26px;
-  width: 100%;
-  height: 100%;
+  inline-size: 100%;
+  block-size: 100%;
+  max-inline-size: 399px;
 }
 
 .result__video-container {
   position: relative;
   display: block;
   object-fit: cover;
-  /* width: 100%;
-  margin-top: 78px; */
-  /* height: 100%; */
+  inline-size: 711px;
+  block-size: 386px;
 }
 
 .result__video {
   object-fit: cover;
   width: 711px;
-  height: 95.46%;
+  height: inherit;
 }
 
 .search-form {
@@ -111,10 +110,10 @@ ol {
   justify-content: space-between;
   flex-direction: row;
   align-items: flex-start;
+  margin-bottom: 3px;
 }
 
 .title {
-  margin-bottom: 26px;
   font-family: Oswald, sans-serif;
   font-size: 75px;
   font-weight: 700;
@@ -138,14 +137,14 @@ ol {
 
 .content__list {
   display: grid;
-  gap: 30px;
+  gap: 24px;
   width: inherit;
 }
 
 .content__list-item {
   display: block;
-  width: 390px;
-  padding: 3px 0;
+  /* width: 390px; */
+  padding: 0 3px;
 }
 
 .content__video-card {
@@ -176,7 +175,7 @@ ol {
 }
 
 .content__video-card-description-container {
-  width: inherit;
+  /* width: inherit; */
   width: 196px;
   flex-grow: inherit;
 }
@@ -188,6 +187,8 @@ ol {
 }
 
 .search-form__fieldset-title {
+  margin-bottom: 3px;
+
   font-family: 'Fira Sans Condensed', sans-serif;
   font-weight: 400;
   font-size: 18px;
@@ -200,14 +201,16 @@ ol {
   cursor: pointer;
 }
 
-.content__video-card-title {   /* УЧТИ ПЕРЕПОЛНЕНИЕ ТЕКСТА(А КАК?) */
+.content__video-card-title { 
   font-family: Oswald, sans-serif;
-  /* width: 196px;
-  height: 103px; */
   font-weight: 700;
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-bottom: 6px;
 }
 
 .content__video-card-description {
@@ -215,26 +218,29 @@ ol {
   font-weight: 400;
   font-size: 18px;
   line-height: 16.2px;
-  /* line-clamp:; */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  overflow: hidden;
 }
 
 .search-form__fieldset {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 10px;
+  /* align-items: flex-start;
+  gap: 10px; */
   border: none;
 }
 
 .search-form__textfield {
   width: 225px;
   height: 27px;
-  margin: 1px 1px;
+  margin: 1px 0;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
   border-left: none;
   border-right: none;
-  
 
   font-family: 'Fira Sans Condensed', sans-serif;
   font-weight: 400;
@@ -246,14 +252,25 @@ ol {
   appearance: none;
   outline: none;
 }
+/* тут явно косяк. почему не получается убрать один из border? -> */
 
 .search-form__textfield:focus-visible {
   outline: none;
+  border-bottom: 1px solid #fff;
 }
+
+.search-form__textfield:active {
+  border-bottom: 1px solid #fff; 
+}
+
+.search-form__textfield:not(:focus-visible) {
+  border-bottom: 1px solid #fff;
+}
+/* <- тут явно косяк. почему не получается убрать один из border? */
 
 .search-form__checkbox-list {
   display: flex;
-  gap: 17px;
+  gap: 14px;
 }
 
 .search-form__label {
@@ -340,9 +357,12 @@ ol {
 }
 
 .search-form__submit-button {
-  /* display: flex; */
+  display: flex;
   width: 194px;
   height: 34px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 }
 
 .more-button {
