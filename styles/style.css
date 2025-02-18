@@ -88,7 +88,7 @@ ol {
   gap: 26px;
   inline-size: 100%;
   block-size: 100%;
-  max-inline-size: 399px;
+  width: 399px;
 }
 
 .result__video-container {
@@ -118,7 +118,8 @@ ol {
   font-size: 75px;
   font-weight: 700;
   text-transform: uppercase;
-  line-height: 70.5px;
+  line-height: 94%;
+  flex-grow: 0;
 }
 
 .content__accent {
@@ -127,35 +128,29 @@ ol {
 
 .content__list-container {
   position: relative;
-  /* display: grid; */
   height: 298px;
-  width: 399px;
-  overflow-y: auto;
-  overflow-x: auto;
+  overflow: auto;
 }
 
 
 .content__list {
   display: grid;
-  gap: 24px;
+  gap: 30px;
   width: inherit;
-  margin-bottom: 32px;
+  margin-bottom: 30px;
+  padding: 0 3px;
 }
 
 .content__list-item {
   display: block;
-  /* width: 390px; */
-  padding: 0 3px;
+  outline: none;
 }
 
 .content__video-card {
   display: flex;
   flex-direction: row;
   align-items: stretch;
-  height: 103px;
-  /* display: grid;
-  grid-template-columns: 196px 194px; */
-
+  padding-left: 2px;
 }
 
 .content__card-link_current .content__video-card {
@@ -167,16 +162,11 @@ ol {
   text-decoration: underline; 
 }
 
-.content__list-item:focus {
-  outline: none;
-}
-
-.content__video-card:focus-visible {
+.content__list-item:focus-visible {
   outline: 1px solid #fff;
 }
 
 .content__video-card-description-container {
-  /* width: inherit; */
   width: 196px;
   flex-grow: inherit;
 }
@@ -184,7 +174,9 @@ ol {
 .content__video-card-thumbnail {
   object-fit: cover;
   object-position: center;
-  width: 194px
+  width: 194px;
+  height: 103px;
+  display: block;
 }
 
 .search-form__fieldset-title {
@@ -211,6 +203,7 @@ ol {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  margin-top: 2px;
   margin-bottom: 6px;
 }
 
@@ -261,7 +254,7 @@ ol {
 }
 
 .search-form__textfield:active {
-  border-bottom: 1px solid #fff; 
+  border-bottom: 1px solid #fff;
 }
 
 .search-form__textfield:not(:focus-visible) {
@@ -368,10 +361,11 @@ ol {
 
 .more-button {
   display: flex;
-  width: 100%;
+  width: 99%;
   height: 34px;
   justify-content: center;
-  /* margin-bottom: ; */
+  align-items: center;
+  margin-bottom: 7px;
 }
 
 .button:hover {
