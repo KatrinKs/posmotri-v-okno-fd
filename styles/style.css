@@ -150,7 +150,7 @@ ol {
   display: flex;
   flex-direction: row;
   align-items: stretch;
-  padding-left: 2px;
+  /* padding-left: 2px; */
 }
 
 .content__card-link_current .content__video-card {
