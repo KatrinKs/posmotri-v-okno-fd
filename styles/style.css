@@ -162,7 +162,7 @@ ol {
   background-color: var(--color-active);
 }
 
-.content__card-link:hover .content__video-card-title,
+.content__card-link:hover .content__video-card-title, 
 .content__card-link:hover .content__video-card-description {
   text-decoration: underline; 
 }
@@ -233,15 +233,12 @@ ol {
 .search-form__fieldset {
   display: flex;
   flex-direction: column;
-  /* align-items: flex-start;
-  gap: 10px; */
   border: none;
 }
 
 .search-form__textfield {
   width: 225px;
   height: 27px;
-  /* margin: 1px 0; */
   border: none;
 
   font-family: 'Fira Sans Condensed', sans-serif;
