@@ -91,7 +91,6 @@ ol {
 .content__details {
   display: grid;
   grid-area: content__details;
-  gap: 26px;
   inline-size: 100%;
   block-size: 100%;
   width: 399px;
@@ -124,8 +123,8 @@ ol {
   font-size: 75px;
   font-weight: 700;
   text-transform: uppercase;
-  line-height: 94%;
-  flex-grow: 0;
+  line-height: 70px;
+  margin-bottom: 22px;
 }
 
 .content__accent {
@@ -136,6 +135,7 @@ ol {
   position: relative;
   height: 298px;
   overflow: auto;
+  margin-bottom: 4px;
 }
 
 
@@ -150,7 +150,6 @@ ol {
 .content__list-item {
   display: block;
   outline: none;
-  padding-top: 2px;
 }
 
 .content__video-card {
@@ -210,13 +209,12 @@ ol {
   font-family: Oswald, sans-serif;
   font-weight: 700;
   font-size: 30px;
-  line-height: 30px;
+  line-height: 34px;
   text-transform: uppercase;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  margin-top: 2px;
-  margin-bottom: 6px;
+  margin-bottom: 2px;
 }
 
 .content__video-card-description {
@@ -224,6 +222,7 @@ ol {
   font-weight: 400;
   font-size: 18px;
   line-height: 16.2px;
+  letter-spacing: -0.2px;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 4;
@@ -372,7 +371,7 @@ ol {
   height: 34px;
   justify-content: center;
   align-items: center;
-  margin-bottom: 7px;
+  margin-bottom: 2px;
   margin-left: 2px;
 }
 
